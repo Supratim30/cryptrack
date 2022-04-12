@@ -56,7 +56,7 @@ row:{
 },
 pagination: {
   '& .MuiPaginationItem-root':{
-    color: 'gold',
+    color: '#fff',
   },
 }
 }));
@@ -74,7 +74,7 @@ const classes = useStyles();
           onChange={(e) => setSearch(e.target.value)}
         />
         <TableContainer>
-        {loading ? (<LinearProgress style={{backgroundColor:"gold"}}/>):(<Table><TableHead style={{backgroundColor: '#EEBC1D'}}>
+        {loading ? (<LinearProgress style={{backgroundColor:"gold"}}/>):(<Table><TableHead style={{backgroundColor: '#db5c01'}}>
 <TableRow>{
   ["Coin", "Price", "24h Change", "Market Cap"].map((head) =>(
     <TableCell
