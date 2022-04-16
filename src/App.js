@@ -19,7 +19,7 @@ minHeight: "100vh"
 
 const classes = useStyles();
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className={classes.App}>
         <Header/>
         <Routes>
@@ -28,7 +28,7 @@ const classes = useStyles();
         </Routes>
       </div>
       <Alert/>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
