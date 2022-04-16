@@ -9,20 +9,14 @@ import { Pagination } from '@material-ui/lab';
 
 const CoinsTable = () => {
 
-const [coins, setCoins] = useState([]);
-const [loading, setLoading] = useState(false);
+
 const [page, setPage] = useState(1)
 const [search, setSearch] = useState('');
 const history = useNavigate();
 
-const {currency, symbol} = CryptoState();
+const {currency, symbol, coins, loading, fetchCoins} = CryptoState();
 
-const fetchCoins = async () => {
-  setLoading(true);
-  const {data} = await axios.get(CoinList(currency));
-  setCoins(data);
-  setLoading(false);
-};
+
 //console.log(coins);
 useEffect(() =>{
 fetchCoins();
